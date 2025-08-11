@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CursoJS/modelo/assets/css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+    
+
+    <table class="calculadora">
+        <tr>
+            <td colspan="4"><input type="text" class="display"></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn btn-clear">C</button></td>
+            <td><button class="btn btn-num">(</button></td>
+            <td><button class="btn btn-num">)</button></td>
+            <td><button class="btn btn-num">/</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn btn-num">7</button></td>
+            <td><button class="btn btn-num">8</button></td>
+            <td><button class="btn btn-num">9</button></td>
+            <td><button class="btn btn-num">*</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn btn-num">4</button></td>
+            <td><button class="btn btn-num">5</button></td>
+            <td><button class="btn btn-num">6</button></td>
+            <td><button class="btn btn-num">+</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="btn btn-num">1</button></td>
+            <td><button class="btn btn-num">2</button></td>
+            <td><button class="btn btn-num">3</button></td>
+            <td><button class="btn btn-num">-</button></td>
+        </tr>   
+
+        <tr>
+            <td><button class="btn btn-num">.</button></td>
+            <td><button class="btn btn-num">0</button></td>
+            <td><button class="btn btn-del">&laquo;</button></td>
+            <td><button class="btn btn-eq">=</button></td>
+        </tr>   
+    </table>
+    </div>
+
+    <style>
+        .calculadora{
+            width: 400px;
+        }
+
+        .calculadora td{
+            border: none;
+        }
+
+        table {
+          table-layout: fixed;
+          width: 100%;
+          border: none;
+        }
+
+        .display{
+            font-size: 2em;
+            width: 100%;
+            border: 2px solid rgb(76, 76, 76);
+            text-align: right;
+            border-radius: 8px;
+        }
+
+        .btn{
+            border: none;
+            font-size: 1em;
+            border: none;
+            background-color: rgb(221, 221, 221);
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+        }
+
+        .btn:hover{
+            background-color: rgb(181, 181, 181);
+        }
+
+        .btn-eq{
+            background-color: rgb(198, 89, 0);
+        }
+
+        .btn-eq:hover{
+            background-color: rgb(154, 71, 2);
+        }
+
+    </style>
+    <script src="../js/76 - Calculadora.js"></script>
+</body>
+</html>
