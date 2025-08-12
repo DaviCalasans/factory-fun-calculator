@@ -14,7 +14,7 @@ function criarCalculadora(){
 
         
         showDisplay(valorClicado){
-            this.display.value += valorClicado
+            this.display.value += valorClicado;
         },
 
         clearDisplay(){
@@ -26,14 +26,28 @@ function criarCalculadora(){
             this.display.value = newDisplay;
         },
 
-        equalDisplay(){
+        realizaConta(){
+            let conta = this.display.value;
 
+            try{
+                conta = eval(conta)
+
+                if(!conta){
+                    alert("Conta inválida!");
+                    return;
+                }
+
+                this.display.value = conta;
+            }catch(e){
+                alert("Conta inválida!");
+                return;
+            }
         },
         
         iniciaEventos(){
             this.btnNum.forEach(btn => {
                 btn.addEventListener('click', (e) => {
-                    const valorClicado = e.target.textContent;
+                    const valorClicado = e.target.textContent; //Convertendo o textContent para Numeber
                     this.showDisplay(valorClicado);
                 })
             })
@@ -47,8 +61,9 @@ function criarCalculadora(){
             })
 
             this.btnEqual.addEventListener('click', (e) => {
-                this.deleteOne();
+                this.realizaConta();
             })
+
 
         }
     }
